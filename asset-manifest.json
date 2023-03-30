@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/korcat/static/css/main.5969ff2b.css",
-    "main.js": "/korcat/static/js/main.c7f3639a.js",
+    "main.js": "/korcat/static/js/main.87377ba9.js",
     "index.html": "/korcat/index.html",
     "main.5969ff2b.css.map": "/korcat/static/css/main.5969ff2b.css.map",
-    "main.c7f3639a.js.map": "/korcat/static/js/main.c7f3639a.js.map"
+    "main.87377ba9.js.map": "/korcat/static/js/main.87377ba9.js.map"
   },
   "entrypoints": [
     "static/css/main.5969ff2b.css",
-    "static/js/main.c7f3639a.js"
+    "static/js/main.87377ba9.js"
   ]
 }
