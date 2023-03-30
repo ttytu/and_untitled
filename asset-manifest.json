@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/korcat/static/css/main.81443217.css",
-    "main.js": "/korcat/static/js/main.c178aefc.js",
+    "main.css": "/korcat/static/css/main.5969ff2b.css",
+    "main.js": "/korcat/static/js/main.c7f3639a.js",
     "index.html": "/korcat/index.html",
-    "main.81443217.css.map": "/korcat/static/css/main.81443217.css.map",
-    "main.c178aefc.js.map": "/korcat/static/js/main.c178aefc.js.map"
+    "main.5969ff2b.css.map": "/korcat/static/css/main.5969ff2b.css.map",
+    "main.c7f3639a.js.map": "/korcat/static/js/main.c7f3639a.js.map"
   },
   "entrypoints": [
-    "static/css/main.81443217.css",
-    "static/js/main.c178aefc.js"
+    "static/css/main.5969ff2b.css",
+    "static/js/main.c7f3639a.js"
   ]
 }
