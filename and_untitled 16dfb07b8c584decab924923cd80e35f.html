@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>and_untitled</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="16dfb07b-8c58-4dec-ab92-4923cd80e35f" class="page sans"><header><img class="page-cover-image" src="and_untitled%2016dfb07b8c584decab924923cd80e35f/A7409614-LE_Original.jpeg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">✨</span></div><h1 class="page-title">and_untitled</h1></header><div class="page-body"><figure id="9943f68d-917f-4b78-820a-45759b1d265a"><a href="https://instagram.com/and_untitled?igshid=YmMyMTA2M2Y=" class="block-color-pink bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://instagram.com/and_untitled?igshid=YmMyMTA2M2Y=</div></div></a></figure><nav id="5dcd6a37-2c5a-48af-a34a-6996dae04c33" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#42745816-b0d1-453c-b98a-3193afa53142">INFO</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#00aa1515-b8a8-4915-997f-8674358e7951">PRICING</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#77de124e-705d-415d-be79-caac9b124556">촬영</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#e21a613e-21f6-4160-ba5e-bbe5ba7aee9b">스튜디오/실내 프로필</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#493aaf51-0e48-4d78-a8a4-9dcf74064862">야외 스냅</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#05ee45e8-5b91-4f4c-8dc2-73fd7839b984">보정</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#024cc282-e7d1-4527-bd52-01f6a54f2942">1차 보정 (색감, 구도 등)</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#e9bdb8b4-9a02-4cee-b34e-d6d263c3b7ed">2차 보정 (리퀴파이, 누끼 등 포토샵 세부 작업)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b72631b1-5747-4ef8-af26-8c7a4e9c8b50">환불 규정</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#04cb193e-86f7-4b2e-947c-89c76d2d502e">예약 취소</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#c096a3df-0dc5-4952-be40-6cd36cd161da">예약 변경</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6c7806c0-4df6-4838-a659-ff01a578d272">촬영 진행 순서</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#082923f9-3977-42f8-a633-145178edd3dd">예약 양식</a></div></nav><h1 id="42745816-b0d1-453c-b98a-3193afa53142" class="">INFO</h1><p id="079cb7d8-d195-4e32-a754-61b9a785de09" class="">다양한 사진 경험 있습니다. 촬영 기획부터 보정까지 디테일한 부분 놓지지 않고 꼼꼼하게 작업합니다.</p><ul id="9c53443c-81d3-4fc3-818d-7ba412190a9c" class="bulleted-list"><li style="list-style-type:disc">인물사진: 스튜디오 프로필, 야외 스냅, 아티스트 프로필, 앨범커버, 패션 화보 등</li></ul><ul id="c54e6077-0441-4e16-8af6-2f475e6e0cd3" class="bulleted-list"><li style="list-style-type:disc">제품사진: 한지공예 키트, 인테리어 소품, 가죽 공예 등</li></ul><p id="6a963f5f-d86b-4c73-a1dd-8c566190af03" class="">원하시는 컨셉이나 시안 말씀해주시면 상상을 사진으로 만들어드리겠습니다.</p><p id="986938bc-c538-4bb4-ab23-9b413cf6ffb1" class="">촬영장에는 남녀 포토가 항상 함께하며, 사진 작업이 처음이신 분들도 어색하지 않게 디렉팅 해드립니다. 자세나 표정도 세세하게 봐드리니 부담갖지 말고 연락 주세요!</p><p id="b2841ed8-cf95-4e24-af54-05d7daefcd29" class="">
+</p><h1 id="00aa1515-b8a8-4915-997f-8674358e7951" class="">PRICING</h1><p id="9ee055b8-5554-4055-92ee-82d6b6152802" class="">작업 난이도와 보정본 수에 따라 페이가 변동될 수 있습니다.</p><p id="1539cee7-5efc-4d7f-86a5-96d5f281d265" class="">현재 상호 무페이 작업도 진행 중에 있습니다. 상호 무페이 작업은 시안을 보내주시면 검토 후 연락 드리겠습니다.</p><p id="16b5a362-aa66-4587-aa63-d11754d82773" class="">
+</p><h2 id="77de124e-705d-415d-be79-caac9b124556" class="">촬영</h2><p id="38073b91-ed4a-4f4c-a5a1-6b35aefb12d9" class="">기본 촬영장비로 불가능한 작업은 추가 장비 대여료 발생 가능합니다. </p><p id="75c0c205-f3cf-4bc2-b8c5-49998c578683" class="">메이크업, 헤어, 의상은 제공해드리지 않습니다. </p><h3 id="e21a613e-21f6-4160-ba5e-bbe5ba7aee9b" class="">스튜디오/실내 프로필</h3><ul id="3edde90d-422b-4b36-897e-c688195ddda8" class="bulleted-list"><li style="list-style-type:disc">기본 컨셉 1개 15만원<ul id="6b21a46f-ade8-4c94-bf4a-5b1ec6de61e7" class="bulleted-list"><li style="list-style-type:circle">착장 1개 / 촬영시간 1시간</li></ul><ul id="62968189-73bb-4f47-850d-285f51ecc6c2" class="bulleted-list"><li style="list-style-type:circle">최종 보정본 3장 제공</li></ul></li></ul><ul id="cd1cc77b-4a6e-497f-88d3-3183d094e3f1" class="bulleted-list"><li style="list-style-type:disc">컨셉 2개 25만원 <ul id="fa947fdd-a642-4121-97fb-532d73d2038b" class="bulleted-list"><li style="list-style-type:circle">착장 2개 / 촬영시간 2시간</li></ul><ul id="9c46dcb5-e071-4caf-96da-91be3a90591a" class="bulleted-list"><li style="list-style-type:circle">최종 보정본 6장 제공</li></ul></li></ul><ul id="ece18c54-c0bc-4d6e-84c6-838b236afe9e" class="bulleted-list"><li style="list-style-type:disc">컨셉 3개 33만원<ul id="f04ee09b-ed69-4bd9-8f42-a416cfa56ba2" class="bulleted-list"><li style="list-style-type:circle">착장 3개 / 촬영시간 3시간</li></ul><ul id="c9a2215c-69ec-4ef1-b3f2-c7a8a1b427d7" class="bulleted-list"><li style="list-style-type:circle">최종 보정본 9장 제공</li></ul></li></ul><ul id="90a20aaa-5a2b-49ec-b536-cfc29a8e1506" class="bulleted-list"><li style="list-style-type:disc">컨셉 4개 이상 가격 별도 문의<hr id="5016f3be-d067-4231-96e9-994aee3e2161"/></li></ul><ul id="7344da62-2c0b-4d65-95e1-3b1093221d9a" class="bulleted-list"><li style="list-style-type:disc">최종 보정본 추가 시 장당 3만원</li></ul><ul id="77e3a795-73ee-4888-a138-aa5ce62ae229" class="bulleted-list"><li style="list-style-type:disc">인원 추가 별도 문의</li></ul><ul id="4d0cb168-5a16-45d4-8206-aab9f9abb985" class="bulleted-list"><li style="list-style-type:disc">상업 촬영, 브랜드 촬영 가격 별도 문의</li></ul><ul id="e62bf54a-8cdb-4cd1-948c-e589cf910dfe" class="bulleted-list"><li style="list-style-type:disc">스튜디오 대여비 별도 (시간당 2~3만원)<ul id="09c2815e-9fad-4bb4-b48b-6ba53e0f0759" class="bulleted-list"><li style="list-style-type:circle">동행 있을 시 추가 비용 발생할 수 있습니다. </li></ul></li></ul><ul id="7a44ff61-ca14-4ec7-bfea-1566933f71bd" class="bulleted-list"><li style="list-style-type:disc">조명 세팅 및 메이크업, 헤어, 의상 착용, 휴식 등 촬영 외 시간 1시간당 최대 20분 포함</li></ul><h3 id="493aaf51-0e48-4d78-a8a4-9dcf74064862" class="">야외 스냅</h3><ul id="2b89f80f-fce5-4d70-8643-a1ea0e285c96" class="bulleted-list"><li style="list-style-type:disc">개인 스냅 1시간 10만원<ul id="bcd87732-ac37-4064-91ff-c11d6ca765ae" class="bulleted-list"><li style="list-style-type:circle">착장 1개</li></ul><ul id="aaac068a-3268-477c-8ea5-9c32999b5e0c" class="bulleted-list"><li style="list-style-type:circle">최종 보정본 3장 제공</li></ul></li></ul><ul id="71a39a9c-b3f1-41c3-af52-1bde6ecbd2bc" class="bulleted-list"><li style="list-style-type:disc">개인 스냅 2시간 20만원<ul id="cc4352a9-4c83-458a-a2b8-baaf77172fd0" class="bulleted-list"><li style="list-style-type:circle">착장 최대 2개</li></ul><ul id="1e36eecc-278f-4211-b232-73482326dc7a" class="bulleted-list"><li style="list-style-type:circle">최종 보정본 6장 제공</li></ul></li></ul><ul id="048b5283-0778-4ebb-a414-4b7b8c8cbcba" class="bulleted-list"><li style="list-style-type:disc">스냅 촬영 3시간 이상 별도 문의<hr id="4a8b04fd-be42-46ce-9644-9b043b766684"/></li></ul><ul id="a1a1a3f0-9800-49f0-968e-52f94236bf49" class="bulleted-list"><li style="list-style-type:disc">인원 추가 1인당 3만원</li></ul><ul id="fb013450-0c6f-4894-88ca-28fb3d66a49f" class="bulleted-list"><li style="list-style-type:disc">상업 촬영, 브랜드 촬영 가격 별도 문의</li></ul><ul id="11cb949f-bf61-48b9-915a-4411e1e79155" class="bulleted-list"><li style="list-style-type:disc">장소 이동, 메이크업, 헤어, 의상 착용, 휴식 등 촬영 외 시간 1시간당 최대 20분 포함</li></ul><p id="c8092a25-e815-42bf-8b0f-30a1c1b53e5e" class="">
+</p><h2 id="05ee45e8-5b91-4f4c-8dc2-73fd7839b984" class="">보정</h2><p id="19cf71f8-d6a0-4e31-9d13-cf3e3986752a" class="">촬영 후 보정 전에 특별히 원하는 점이나 신경쓰이는 부분 요청 받습니다. </p><h3 id="024cc282-e7d1-4527-bd52-01f6a54f2942" class="">1차 보정 (색감, 구도 등)</h3><ul id="a9b48ea3-d868-453f-ae2e-b13192fc1eb3" class="bulleted-list"><li style="list-style-type:disc">최대 3일 이내</li></ul><ul id="f7b940a8-8d91-4161-9fff-e96e28b4db2f" class="bulleted-list"><li style="list-style-type:disc">1차 보정 후 최종본 셀렉 <ul id="f3d20bf5-ecaf-4894-9702-c67f5114ad65" class="bulleted-list"><li style="list-style-type:circle">셀렉용 사진은 저해상 파일로 공유해드립니다. </li></ul></li></ul><ul id="3ad2adab-5001-4fcd-9f8e-8e35bad6f0d6" class="bulleted-list"><li style="list-style-type:disc">전체 원본(색보정 O) 원할 시 3만원 추가<ul id="1ced9f59-3c03-4f50-bdd0-a493666990a8" class="bulleted-list"><li style="list-style-type:circle">직접 보정하여 사용하여도 무관합니다. (색보정 X)</li></ul><ul id="96806f8a-9ffc-43ca-b2d8-ee2957b2c859" class="bulleted-list"><li style="list-style-type:circle">상업적 사용은 불가능합니다. </li></ul></li></ul><h3 id="e9bdb8b4-9a02-4cee-b34e-d6d263c3b7ed" class="">2차 보정 (리퀴파이, 누끼 등 포토샵 세부 작업)</h3><ul id="30159fe8-ffdb-4991-8eae-df66028d2372" class="bulleted-list"><li style="list-style-type:disc">최대 10일 이내</li></ul><ul id="fd0e81c3-c0be-4693-9e17-c5cc3ba4297c" class="bulleted-list"><li style="list-style-type:disc">2차 보정 전 얼굴 보정에 관하여 원하는 부분 설명, 레퍼런스 사진 등 첨부 부탁드립니다. 요청 내용 최대한 반영해 드립니다 :)</li></ul><ul id="0df2f514-e215-4356-9aff-e44ce6dd8dea" class="bulleted-list"><li style="list-style-type:disc">각 사진 당 피드백 1회 가능하니 2차 보정 후 한번에 말씀해주세요. </li></ul><ul id="d05c6691-125a-44a6-9af6-3820a431b684" class="bulleted-list"><li style="list-style-type:disc">피드백 1회 이후 추가 보정 원할 시 장당 1만원</li></ul><p id="190dbf75-4e3f-4171-b739-e5a07803bbff" class="">
+</p><h2 id="b72631b1-5747-4ef8-af26-8c7a4e9c8b50" class="">환불 규정</h2><ul id="efcc25c0-ce74-4d8f-9c5e-58c8f23bdd87" class="bulleted-list"><li style="list-style-type:disc">노쇼 방지 및 스케쥴 관리를 위해 예약금을 받고 있습니다. </li></ul><ul id="f737f2f8-5aaa-44bb-9e76-5e1f65848453" class="bulleted-list"><li style="list-style-type:disc">예약금은 최종 금액의 50%입니다. </li></ul><h3 id="04cb193e-86f7-4b2e-947c-89c76d2d502e" class="">예약 취소</h3><ul id="da231a65-86ab-4527-a52c-1bccc2f0324c" class="bulleted-list"><li style="list-style-type:disc">예약 취소는 촬영일로부터 3주 전까지만 가능합니다. (100% 환불)</li></ul><ul id="1c8fa503-e473-498e-996f-b0b8cf5c0a99" class="bulleted-list"><li style="list-style-type:disc">촬영일로부터 3주 이후 취소 시 예약금은 환불 불가능하니 신중하게 예약 진행 부탁드립니다. </li></ul><h3 id="c096a3df-0dc5-4952-be40-6cd36cd161da" class="">예약 변경</h3><ul id="32917d98-78bd-4388-b022-c22fca03e372" class="bulleted-list"><li style="list-style-type:disc">예약일 변경은 촬영일로부터 2주 전까지 1회만 가능합니다. </li></ul><ul id="1b37a4bc-1177-47df-90d7-30639df73a66" class="bulleted-list"><li style="list-style-type:disc">예약 확정 후 컨셉 수나 시간 변경은 불가합니다. </li></ul><p id="950ef8f2-9277-4c1e-8ad9-3520dff517a3" class="">
+</p><h1 id="6c7806c0-4df6-4838-a659-ff01a578d272" class="">촬영 진행 순서</h1><ol type="1" id="0c08ff63-5420-4922-9418-acc4361e1a0f" class="numbered-list" start="1"><li>기본 구성과 가격 확인</li></ol><ol type="1" id="48e4bda6-323d-468a-81db-682e70bc2437" class="numbered-list" start="2"><li>예약 양식 작성 및 예약금 입금</li></ol><ol type="1" id="ac564c4f-cf9a-43fa-b1f4-d517f7911268" class="numbered-list" start="3"><li>일정 조율 후 예약 확정</li></ol><ol type="1" id="5e036f5d-ddec-4efe-ac02-5038c0815925" class="numbered-list" start="4"><li>컨셉, 착장 등의 시안 상담<ul id="a30fc570-ad36-4cbb-a4da-6224688e2367" class="bulleted-list"><li style="list-style-type:disc">의상이나 악세서리 등은 직접 준비해 주세요. 여러벌 챙겨오셔서 결정하셔도 괜찮습니다. </li></ul><ul id="30c678e4-837b-4de2-939d-06bd915f70ac" class="bulleted-list"><li style="list-style-type:disc">컨셉 레퍼런스, 착장의 실물 사진 등을 보내주시면 작업이 더욱 수월해집니다. </li></ul></li></ol><ol type="1" id="54ee823f-2fe3-421a-b319-f79906741a45" class="numbered-list" start="5"><li>촬영진행 후 잔금 현장결제</li></ol><ol type="1" id="1faf6543-be47-42b4-ab60-11b43fa399cc" class="numbered-list" start="6"><li>1차보정 (색감, 구도 등) 후 A컷 셀렉</li></ol><ol type="1" id="7e593576-5421-41c9-84c7-078e2832a6c0" class="numbered-list" start="7"><li>최종 보정본 전달 (셀렉일 기준 최대 10일 소요)<ul id="098d7fc8-90b7-4842-8719-6c727afc9541" class="bulleted-list"><li style="list-style-type:disc">작업량에 따라 딜레이 가능성 있습니다. </li></ul><ul id="e6764460-60c4-46c1-9438-4f648e201c89" class="bulleted-list"><li style="list-style-type:disc">원본 사진 요청 시 최종 보정본과 함께 전달해드립니다. </li></ul></li></ol><p id="4466dba3-9ed3-4e0f-a372-3cd833d650f0" class="">
+</p><h1 id="082923f9-3977-42f8-a633-145178edd3dd" class="">예약 양식</h1><ol type="1" id="b1cb09f0-69d3-47eb-b734-9062ee67cf9b" class="numbered-list" start="1"><li>예약자 이름:</li></ol><ol type="1" id="cfcd3c08-91d3-4235-9fa7-ee876fcd5b1a" class="numbered-list" start="2"><li>연락처: </li></ol><ol type="1" id="9eb31ed1-5b32-4678-9f13-876bd6720429" class="numbered-list" start="3"><li>원하는 촬영 날짜와 시간: (여러개 보내주실수록 좋습니다)</li></ol><ol type="1" id="2a8c52f8-bb39-494b-8229-9b8abbe5b898" class="numbered-list" start="4"><li>촬영 종류 및 컨셉 개수: </li></ol><ol type="1" id="d3247acf-d8f2-4d63-8fec-84d9cbc2f276" class="numbered-list" start="5"><li>사진 용도:</li></ol><ol type="1" id="6e9763ff-1daf-4a4f-8806-d275ddbb4b38" class="numbered-list" start="6"><li>기타 문의 사항:</li></ol><p id="510525ec-e506-4c69-a4ae-fc930b9f49fd" class="">
+</p></div></article></body></html>
