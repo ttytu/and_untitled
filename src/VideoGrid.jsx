@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const VideoGrid = () => {
 	const [videoUrls, setVideoUrls] = useState([
-		'/MAH05692.mp4', '/MAH05693.mp4', '/MAH05694.mp4',
-		'/MAH05695.mp4', '/MAH05696.mp4', '/MAH05697.mp4',
-		'/MAH05698.mp4', '/MAH05699.mp4', '/MAH05700.mp4'
+		'/videos/v1.mp4', '/videos/v2.mp4', '/videos/v3.mp4',
+		'/videos/v4.mp4', '/videos/v5.mp4', '/videos/v6.mp4',
+		'/videos/v7.mp4', '/videos/v8.mp4', '/videos/v9.mp4'
 	]);
 
 	const [playing, setPlaying] = useState(new Array(videoUrls.length).fill(false));
@@ -53,6 +53,23 @@ const VideoGrid = () => {
 		setVideoUrls(shuffledUrls);
 	};
 
+	const handleReset = () => {
+		const resetUrls = [
+			'/videos/v1.mp4', '/videos/v2.mp4', '/videos/v3.mp4',
+			'/videos/v4.mp4', '/videos/v5.mp4', '/videos/v6.mp4',
+			'/videos/v7.mp4', '/videos/v8.mp4', '/videos/v9.mp4'
+		];
+		const resetPlaying = new Array(resetUrls.length).fill(false);
+		const resetRefs = new Array(resetUrls.length).fill(null);
+		videoRefs.current.forEach((video, index) => {
+			resetRefs[index] = video;
+			resetPlaying[index] = playing[index];
+		});
+		setPlaying(resetPlaying);
+		videoRefs.current = resetRefs;
+		setVideoUrls(resetUrls);
+	};
+
 	const handleRefresh = () => {
 		window.location.reload();
 	};
@@ -74,10 +91,11 @@ const VideoGrid = () => {
 				))}
 			</div>
 			<div className="position-absolute controls">
-					<a className="btn btn-dark" onClick={handleMuteUnmute}>{muted ? <i className="bi bi-volume-up"></i> : <i className="bi bi-volume-mute"></i>}</a>
-					<a className="btn btn-dark" onClick={handleFullScreen}><i className="bi bi-fullscreen"></i></a>
-					<a className="btn btn-dark" onClick={handleRefresh}><i className="bi bi-shuffle"></i></a>
-				</div>
+				<a className="btn btn-dark" onClick={handleMuteUnmute}>{muted ? <i className="bi bi-volume-up"></i> : <i className="bi bi-volume-mute"></i>}</a>
+				<a className="btn btn-dark" onClick={handleFullScreen}><i className="bi bi-fullscreen"></i></a>
+				<a className="btn btn-dark" onClick={handleRefresh}><i className="bi bi-shuffle"></i></a>
+				<a className="btn btn-dark" onClick={handleReset}><i className="bi bi-arrow-counterclockwise"></i></a>
+			</div>
 		</>
 	);
 };
