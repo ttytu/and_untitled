@@ -1,0 +1,63 @@
+.App {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.row.grid-container {
+	padding: 2% 10%;
+	margin: 0 0;
+}
+
+.play-pause {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	width: calc(100% - 4px);
+	height: 100%;
+	top: 0;
+	left: 2px;
+	background-color: transparent;
+	border: none;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+	box-sizing: border-box;
+	font-size: 1.5rem;
+}
+
+.video-container:hover video {
+	filter: brightness(0.5);
+	transition: filter 0.2s ease-in-out;
+}
+
+.video-container:hover .play-pause {
+	opacity: 1;
+}
+
+.controls .btn {
+	background-color: black;
+	border: none;
+}
+
+.controls .btn:hover {
+	background-color: rgb(33, 33, 33);
+}
+
+video {
+	animation-name: example;
+	animation-duration: 2s;
+}
+
+@keyframes example {
+	0% {
+		filter: grayscale(1) brightness(0);
+	}
+	100% {
+		filter: grayscale(0) brightness(1);
+	}
+}
+
+.controls {
+	bottom: 10px;
+}
