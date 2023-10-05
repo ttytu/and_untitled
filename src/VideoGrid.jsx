@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const VideoGrid = () => {
 	const [videoUrls, setVideoUrls] = useState([
-		'/videos/MAH05692.MP4', '/videos/MAH05693.MP4', '/videos/MAH05694.MP4',
-		'/videos/MAH05695.MP4', '/videos/MAH05696.MP4', '/videos/MAH05697.MP4',
-		'/videos/MAH05698.MP4', '/videos/MAH05699.MP4', '/videos/MAH05700.MP4'
+		'/videos/MAH05692.mp4', '/videos/MAH05693.mp4', '/videos/MAH05694.mp4',
+		'/videos/MAH05695.mp4', '/videos/MAH05696.mp4', '/videos/MAH05697.mp4',
+		'/videos/MAH05698.mp4', '/videos/MAH05699.mp4', '/videos/MAH05700.mp4'
 	]);
 
 	const [playing, setPlaying] = useState(new Array(videoUrls.length).fill(false));
